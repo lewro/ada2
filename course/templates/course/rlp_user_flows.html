@@ -1,0 +1,46 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=82 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="rlp_user_flows" navgroup="real-life-project" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="07 Real-life project" header_two="User Flows" %}
+  {% include 'course/partials/data.html' with current_lesson=56 video_length="15:22" %}
+  {% include 'course/partials/tabs.html' %}
+  {% include 'course/partials/video.html' with id=356420885 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li><a href="/course/media/rlpuserflows.xd" download>User Flows - Adobe Xd File</a></li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      In this project, we will be mapping up the basic user flows such are:
+    </p>
+    <ul>
+      <li>Search for a flight</li>
+      <li>Book a flight</li>
+      <li>View Deal page to select a flight</li>
+      <li>View Destination page to select a flight</li>
+    </ul>
+
+
+
+  </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

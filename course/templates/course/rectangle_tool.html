@@ -1,0 +1,45 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=22 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="rectangle-tool" navgroup="adobe-xd" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="03 Adobe Xd" header_two="Rectangle Tool" %}
+  {% include 'course/partials/data.html' with current_lesson=22 video_length="03:08" %}
+  {% include 'course/partials/tabs.html' %}
+  {% include 'course/partials/video.html' with id=354478946 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li><a href="/course/media/rectangletool.xd" download>Rectangle Tool - Adobe Xd File</a></li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      Rectangle Tool is one of the most useful tools for application design. It is used heavily in all types of applications.
+
+      To list just a few: navigation bar, footer bar, sidebar. cards, background boxes etc.
+
+      You can create them simply by selecting the rectangle tool and clicking on the point very the top left corner should sit and pulling in diagonal into the point where the bottom right corner will be.
+
+      You can change the height and width of the rectangle anytime by simply dragging its borders.
+    </p>
+
+  </div>
+
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

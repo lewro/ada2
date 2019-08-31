@@ -1,0 +1,45 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=12 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="typography-scale" navgroup="design-basics" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="02 Design Basics" header_two="Typography - Scale" %}
+  {% include 'course/partials/data.html' with current_lesson=12  video_length="02:04" %}
+  {% include 'course/partials/tabs.html' with nofiles="nofiles" %}
+  {% include 'course/partials/video.html' with id=353366638 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li>No Files</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      Working with text requires paying attention to hierarchy. The hierarchy is achieved with text size, weight and style.
+
+      Having a strong hierarchy helps users to understand the
+      structure of the content and quickly scan the content when looking for specific information.
+
+      As a designer, you will be setting up the structure defining text sizes, weight and style for your project. The most important part is to keep things consistent.
+
+      All your header 1 should look exactly the same as well as header 2 and so on. The same applies to the body text, button text, form text, label text and so on.
+    </p>
+  </div>
+
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

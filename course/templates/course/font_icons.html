@@ -1,0 +1,54 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=31 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="font-icons" navgroup="adobe-xd" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="03 Adobe Xd" header_two="Font Icons" %}
+  {% include 'course/partials/data.html' with current_lesson=31 video_length="02:08" %}
+  {% include 'course/partials/tabs.html' with nofiles="nofiles" %}
+  {% include 'course/partials/video.html' with id=354487835 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li>No Files</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      Font icons are very popular in application design due to a couple of reasons.
+
+      Font icons are great to use in the design process as well as the development process.
+
+      They can be scaled to any size without losing quality and are easy to install and use.
+
+      You would install font icons the same way you would install any other font.
+    </p>
+    <p>
+      Two most popular libraries are:
+    </p>
+    <ul>
+     <li><a href="https://fontawesome.com">Fontawesome</a></li>
+     <li><a href="https://material.io/tools/icons">Google Material</a></li>
+    </ul>
+
+
+
+  </div>
+
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

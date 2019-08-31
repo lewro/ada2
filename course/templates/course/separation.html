@@ -1,0 +1,43 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=7 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="separation" navgroup="design-basics" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="02 Design Basics" header_two="Separation" %}
+  {% include 'course/partials/data.html' with current_lesson=7  video_length="02:27" %}
+  {% include 'course/partials/tabs.html' with nofiles="nofiles" %}
+  {% include 'course/partials/video.html' with id=353357368 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li>No Files</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>There are many ways to separate individual user interface blocks or elements in your views.
+
+      You can use negative space, typography, color, border, drop-shadow.
+
+      Try to avoid using too many borders or boxes in your views as it makes lots of visual noise. In the case where you decide to use border use light color or dotted line to remove the visual weight.
+
+      The worst scenarios are when designers use boxes inside of boxes inside of boxes trying to separate elements.
+    </p>
+  </div>
+
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

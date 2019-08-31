@@ -1,0 +1,15 @@
+ #sidebar {
+  float: left;
+  width: 20%;
+  padding-top: 100px;
+  background-color: #fff;
+  min-height: 2160px;
+}
+
+#content {
+  float: left;
+  width: 80%;
+  padding: 100px;
+}
+
+.hide-nav #content {width: 100%;}

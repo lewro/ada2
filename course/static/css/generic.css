@@ -1,0 +1,50 @@
+html {
+  background-color: #f9f9f9;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+ol, ul, li {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+h1, h2 {
+  margin: 0px;
+  padding: 0px;
+}
+
+.hidden {
+  display: none;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.list-button {
+  display: block;
+  padding: 15px;
+  background: #222;
+  color: #fff;
+}
+
+.list-button:hover {
+  background: #2189FF;
+  color: #fff;
+}
+
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */

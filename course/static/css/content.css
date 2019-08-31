@@ -1,0 +1,32 @@
+.data {
+  border-top: 1px solid #ddd;
+  margin-bottom: 100px;
+}
+
+.data-primary {
+  padding: 15px 50px 0 0;
+  float: left;
+}
+
+.data-secondary {
+  padding: 15px 50px 0 15px;
+  border-left: 1px solid #ddd;
+  float: left;
+}
+
+.data h2 {
+  margin-top: 5px;
+}
+
+.desription {
+  margin-bottom: 100px;
+  width: 50%;
+}
+
+.desription ul {
+  padding-top: 10px;
+}
+
+.desription ul li {
+  padding-bottom: 10px;
+}

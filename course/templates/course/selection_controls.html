@@ -1,0 +1,43 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=35 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="selection-controls" navgroup="ui-elements" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="04 UI Elementa" header_two="Selection Controls" %}
+  {% include 'course/partials/data.html' with current_lesson=35 video_length="13:31" %}
+  {% include 'course/partials/tabs.html' %}
+  {% include 'course/partials/video.html' with id=354709808 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li><a href="/course/media/selectioncontrols.xd" download>Selectin Controls - Adobe Xd File</a></li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      There are three types of selection controls used in application forms.
+    </p>
+    <ul>
+      <li>Checkboxes - are used when there are multiple choices and multiple selections are allowed.</li>
+      <li>Radio buttons - are used when there are multiple choices but only one option can be selected at a time.</li>
+      <li>Switches - are used as a representation of state ON/OFF.</li>
+    </ul>
+
+  </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

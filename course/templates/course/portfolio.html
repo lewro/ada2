@@ -1,0 +1,49 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=99 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="portfolio" navgroup="portfolio-client" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="08 Portfolio-Client" header_two="Portfolio" %}
+  {% include 'course/partials/data.html' with current_lesson=61 video_length="02:27" %}
+  {% include 'course/partials/tabs.html' with nofiles="nofiles" %}
+  {% include 'course/partials/video.html' with id=356654122 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li>No Files</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      Once you design a few applications you will need to create a portfolio where you will present your work.
+
+      A portfolio is absolutely crucial for any designer. It is more important than any school degree.
+
+      There is plenty of option to choose from. If you can code it up yourself that’s great but if not don’t worry there are plenty of ready-made solutions. Here are a few popular at the moment.
+    </p>
+
+    <ul>
+      <li><a href="https://portfolio.adobe.com/">Adobe Portfolio</a></li>
+      <li><a href="https://www.behance.net">Behance</a></li>
+      <li><a href="https://www.squarespace.net">Squarespace</a></li>
+      <li><a href="https://www.wix.com/">Wix</a></li>
+    </ul>
+
+  </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

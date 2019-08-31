@@ -1,0 +1,40 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=77 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="rlp-wireframes" navgroup="real-life-project" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="07 Real-life project" header_two="Wireframes" %}
+  {% include 'course/partials/data.html' with current_lesson=55 video_length="02:03:44" %}
+  {% include 'course/partials/tabs.html' %}
+  {% include 'course/partials/video.html' with id=356271255 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li><a href="/course/media/reallifeproject.xd" download>Real Life Project Wireframes and Designs - Adobe Xd File</a></li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      During the wireframing phase, we will create wireframes for each screen specified in spec.
+
+      We will connect all the user flows into a clickable prototype.
+    </p>
+
+  </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

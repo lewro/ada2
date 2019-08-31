@@ -1,0 +1,42 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=34 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="sliders" navgroup="ui-elements" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="04 UI Elementa" header_two="Sliders" %}
+  {% include 'course/partials/data.html' with current_lesson=34 video_length="07:22" %}
+  {% include 'course/partials/tabs.html' %}
+  {% include 'course/partials/video.html' with id=354701297 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li><a href="/course/media/sliders.xd" download>Sliders - Adobe Xd File</a></li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      Sliders are a great way to provide a better user experience. Rather than letting the user type the values, you can provide slider which can easily be dragged.
+
+    A slider is not a solution for every scenario though. If you need to specify the exact number, dragging the slider around just to be able to specify number 33 exact could be even more time-consuming then typing the number into a text field. It is up to you as a designer when you believe the slider is the best option for the job.
+
+    Sliders are often used for setting the volume or video content where you do not have to specify the exact number but rather bring the volume up and down a bit.
+  </p>
+
+    </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

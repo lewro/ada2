@@ -1,0 +1,42 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=27 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="drop-shadow" navgroup="adobe-xd" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="03 Adobe Xd" header_two="Drop Shadow" %}
+  {% include 'course/partials/data.html' with current_lesson=27 video_length="03:43" %}
+  {% include 'course/partials/tabs.html' with nofiles="nofiles" %}
+  {% include 'course/partials/video.html' with id=354485742 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li>No Files</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      Drop-shadow is a great tool to provide visual separation of elements or to make an element prominent among other elements.
+
+      Try to avoid heavy drop-shows which bring lots of visual noise.
+
+      Applying smooth soft drop-shadow where elements look elevated works the best and do not distract users.
+    </p>
+  </div>
+
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

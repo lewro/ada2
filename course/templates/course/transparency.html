@@ -1,0 +1,40 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=28 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="transparency" navgroup="adobe-xd" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="03 Adobe Xd" header_two="Transparency" %}
+  {% include 'course/partials/data.html' with current_lesson=28 video_length="01:55" %}
+  {% include 'course/partials/tabs.html' with nofiles="nofiles" %}
+  {% include 'course/partials/video.html' with id=354486274 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li>No Files</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      Opacity or reduced transparency can be applied to any element. It mostly used for overlays on top of images to provide better readability.
+
+      Transparency is often also used when creating color palette. Once the core colors are defined, and we want to create a scale of lighter versions we can place them on top of the white background and gradually reduce the opacity to create full-color palette.
+    </p>
+  </div>
+
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

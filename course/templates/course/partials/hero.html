@@ -1,0 +1,18 @@
+<div class="hero">
+  <div class="top">
+    <div class="row">
+      <a id="logo" href="/">Application Design Academy</a>
+      {% if user.is_authenticated %}
+        <a class="login" href="/start">Visit Your Course</a>
+      {% else %}
+        <a class="login" href="/accounts/login">Login</a>
+        <a class="join" href="/accounts/signup">Join now</a>
+      {% endif %}
+
+    </div>
+  </div>
+  <div class="row">
+    <h1>Application Design Academy</h1>
+    <h2>Practical Systematic Learning</h2>
+  </div>
+</div>

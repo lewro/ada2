@@ -1,0 +1,36 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=5 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="benefits" navgroup="introduction" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="01 Introduction" header_two="Benefits" %}
+  {% include 'course/partials/data.html' with current_lesson=5 video_length="01:48" %}
+  {% include 'course/partials/tabs.html' with nofiles="nofiles" %}
+  {% include 'course/partials/video.html' with id=353247530 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li>No Files</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>This profession is Creative & Analytical. Every day is different. Every day you will be working on a different part of an application or on a different application altogether. One day you might be wireframing a new mobile application next day you might be designing user interface for TV app. You will have an impact on people and businesses. Your work might be used by thousands or even millions of people.
+    Long-term job security. The world is becoming more and more digital application interfaces will be used in most devices we know and even the one we don’t know yet.</p>
+  </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

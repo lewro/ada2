@@ -1,0 +1,40 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=40 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="lists" navgroup="ui-elements" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="04 UI Elementa" header_two="Lists" %}
+  {% include 'course/partials/data.html' with current_lesson=40 video_length="17:29" %}
+  {% include 'course/partials/tabs.html' %}
+  {% include 'course/partials/video.html' with id=354884722 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li><a href="/course/media/lists.xd" download>Lists - Adobe Xd File</a></li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      Lists consist of vertical blocks of text or images. The lists are a great way of providing easily scannable content because of its clear and repeating structure.
+
+      They are often used to list products, features, users etc. The list blocks can consist of text, media, icons, avatars.
+    </p>
+
+  </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=4 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="future" navgroup="introduction" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="01 Introduction" header_two="Future" %}
+  {% include 'course/partials/data.html' with current_lesson=4 video_length="00:59" %}
+  {% include 'course/partials/tabs.html' with nofiles="nofiles" %}
+  {% include 'course/partials/video.html' with id=353247051 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li>No Files</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>Interface design is the profession of the future. As all devices are getting digitised slowly and surely we see screens with
+    interfaces everywhere. Computers, phones, watches, car dashboards, virtual or augmented reality glasses. More and more of traditional devices are getting interfaces: fridges, microwaves, cookers, washing machines, scales, heating, air-condition, cafe machines and so on. Opportunities are endless. Professions such are UI/UX Designer, Product Designer, Interface Designer, Application designer will be in high demand going forward.</p>
+  </div>
+
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

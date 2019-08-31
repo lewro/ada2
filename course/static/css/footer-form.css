@@ -1,0 +1,97 @@
+.footer-form {
+  box-shadow: 0px 10px 200px -3px rgb(0,0,0, 0.2);
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width: 400px;
+  height: 100%;
+  background: #fff;
+  display: none;
+  z-index: 99;
+  overflow: scroll;
+}
+
+.footer-form form {
+  padding-bottom: 500px;
+}
+
+.footer-form h2 {
+  margin-bottom: 25px;
+}
+
+.footer-form-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #2189FF;
+  color: #fff;
+  font-size: 21px;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 100px;
+}
+
+.footer-form-btn:hover {
+  background: #000;
+}
+
+.footer-form .footer-message-top .fas {
+  font-size: 50px;
+  text-align: center;
+}
+
+.footer-form .close-fm {
+  float: right;
+  opacity: .3;
+  margin: -35px -10px 0 0;
+  cursor: pointer;
+}
+
+.footer-form .close-fm:hover {
+  opacity: 1;
+}
+
+.footer-form .close-fm .fas {
+  font-size: 30px;
+}
+
+.footer-form .footer-message-top {
+  padding: 50px 25px 0 25px;
+}
+
+.footer-form .form-cover {
+  padding: 0 25px 25px 25px;
+}
+
+.footer-form .form-submit {
+  width: 400px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 15px 25px;
+  color: #fff;
+  background: #2189FF;
+  cursor: pointer;
+  border: none;
+  -webkit-transition: background-color 500ms ease-out 0.1s;
+  -moz-transition: background-color 500ms ease-out 0.1s;
+  -o-transition: background-color 500ms ease-out 0.1s;
+  transition: background-color 500ms ease-out 0.1s;
+}
+
+.footer-form .form-submit:hover {
+  background: #000;
+  color: #fff;
+}
+
+.footer-form .progress-bar {
+  margin-top: 5px;
+}
+
+input.validation_error,
+textarea.validation_error  {
+  border-bottom: 1px solid #ff4143 !important;
+}

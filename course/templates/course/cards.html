@@ -1,0 +1,44 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=38 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="cards" navgroup="ui-elements" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="04 UI Elementa" header_two="Cards" %}
+  {% include 'course/partials/data.html' with current_lesson=38 video_length="11:25" %}
+  {% include 'course/partials/tabs.html' %}
+  {% include 'course/partials/video.html' with id=354872481 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li><a href="/course/media/cards.xd" download>Cards - Adobe Xd File</a></li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      Cards represent grouped content and actions regarding a single topic.
+
+      Cards usually consist of media, text, icons, thumbnails and actions.
+
+      A card is made of content blocks. Separating content blocks creates a clear structure.
+
+      Cards can appear individually or as a set of cards placed on a grid.
+    </p>
+
+  </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

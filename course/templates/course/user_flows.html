@@ -1,0 +1,44 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=53 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="user-flows" navgroup="wireframes" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="05 Wireframing" header_two="User Flows" %}
+  {% include 'course/partials/data.html' with current_lesson=49 video_length="04:48" %}
+  {% include 'course/partials/tabs.html' %}
+  {% include 'course/partials/video.html' with id=356369123 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li><a href="/course/media/userflows.xd" download>User Flows - Adobe Xd File</a></li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      User Flows are often used to visualise how users will actually use the application.
+
+      User flows are presented on a single canvas where designers show how the user gets from one screen into another by providing an action. (Clicking a button, menu item, select an option from menu etc.)
+
+      Sometimes only the main flows are presented in other cases all possible user flows are shown with all its variations.
+
+      As you can see in the example on the right. In the first flow, the user logs into an application and is presented with a dashboard.  In the second example, a user creates an account and is presented with empty view prompting for action.
+    </p>
+
+  </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

@@ -1,0 +1,10 @@
+.progress-bar {
+  height: 5px;
+  width: 100%;
+  background: #ddd;
+}
+
+.progress-bar .progress-indicator {
+  height: 5px;
+  background: #2189FF;
+}

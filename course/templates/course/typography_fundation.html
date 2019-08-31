@@ -1,0 +1,45 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=11 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="typography-fundation" navgroup="design-basics" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="02 Design Basics" header_two="Typography - Fundation" %}
+  {% include 'course/partials/data.html' with current_lesson=11  video_length="01:46" %}
+  {% include 'course/partials/tabs.html' with nofiles="nofiles" %}
+  {% include 'course/partials/video.html' with id=353365127 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li>No Files</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      For the purpose of application design, we are only going to
+      explain the core foundation of typography.
+
+      Working with letter spacing can increase readability, especially on small text sizes where letters might be too close together by default so you need to adjust the settings.
+
+      There are two types of types: serif and sans serif. A serif is a small shape or projection that appears at the beginning or end of a stroke on a letter.
+
+      Weight of the text is a very useful tool which you should be using often to bring structure to your designs. Weight refers to the relative thickness of a font’s stroke.
+    </p>
+  </div>
+
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

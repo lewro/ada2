@@ -1,0 +1,44 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=48 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="registration-interface" navgroup="wireframes" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="05 Wireframing" header_two="Basics" %}
+  {% include 'course/partials/data.html' with current_lesson=47 video_length="07:09" %}
+  {% include 'course/partials/tabs.html' %}
+  {% include 'course/partials/video.html' with id=355023977 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li><a href="/course/media/wireframingbasics.xd" download>Wireframing Basics - Adobe Xd File</a></li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      Wireframing is a very useful tool used by designers to provide the idea of interface with all its functionality without letting emotions affect decision making.
+
+      Wireframes typically use white, grey and black colour only. The fonts, sizes, spacing, button styles used in wireframes not representing the final product.
+
+      Wireframes are concentrating on layout and functionality. They are a great way of communicating how the interface could work rather than look.
+
+      They are two types of wireframes: Low fidelity & High fidelity
+    </p>
+
+  </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

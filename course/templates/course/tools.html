@@ -1,0 +1,35 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=3 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="tools" navgroup="introduction" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="01 Introduction" header_two="Tools" %}
+  {% include 'course/partials/data.html' with current_lesson=3 video_length="01:11" %}
+  {% include 'course/partials/tabs.html' with nofiles="nofiles" %}
+  {% include 'course/partials/video.html' with id=353246344 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li>No Files</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>There are many tools on the market which allows you to create interfaces. It comes down to your personal preference which tool you choose. In this course we will be working with Adobe Xd. Adobe Xd can be used on both Windows and MAC platforms. Remember that these are just tools and might change in the future. The Tool does not make a good designer, his/her skills do. Once you are comfortable with one tool and understand the logic behind it you will most likely learn any other tool very easily.</p>
+  </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

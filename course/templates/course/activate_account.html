@@ -1,0 +1,28 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+
+<div class="row stranger">
+  <div class="col s12 m6 l6 left">
+    <div class="content">
+      <ul>
+        <li><a class="list-button" href="/administration/">Back to Administration</a></li>
+      </ul>
+      <h1>Activate Account</h1>
+      <form action="/activate_account/" method="post">
+
+        {% csrf_token %}
+
+        <div class="input-field">
+          <input type="text" id="user_id" name="user_id" data-required="true" />
+          <label id="user_id">User ID</label>
+        </div>
+        <button type="submit">Activate Now!</button>
+      </form>
+    </div>
+  </div>
+  <div class="col s12 m6 l6 right" id="login-aw">
+  </div>
+</div>
+
+{% endblock %}

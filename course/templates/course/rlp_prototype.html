@@ -1,0 +1,38 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=85 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="prototype" navgroup="real-life-project" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="07 Real-life project" header_two="Prototype" %}
+  {% include 'course/partials/data.html' with current_lesson=57 video_length="06:55" %}
+  {% include 'course/partials/tabs.html' with nofiles="nofiles" %}
+  {% include 'course/partials/video.html' with id=356380991 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li>No Files</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      In this lesson, we will connect all the wireframes we have created in the previous lessons into an interactive prototype.
+    </p>
+
+  </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

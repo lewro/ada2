@@ -1,0 +1,116 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=17 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="consistency" navgroup="design-basics" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="02 Design Basics" header_two="Consistency" %}
+  {% include 'course/partials/data.html' with current_lesson=17  video_length="07:00" %}
+  {% include 'course/partials/tabs.html' with nofiles="nofiles" %}
+  {% include 'course/partials/video.html' with id=353382308 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li>No Files</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <h3>UI Elements</h3>
+    <p>
+      UI elements in your UI library of design guide should only be defined once per each element and used across the whole
+      application.
+
+      Using multiple styles for single elements in different views could cause confusion among users and is not a good sign of great design.
+
+      As you can see on the examples on the right, both of the UI switches are great switches and could work on any project but you need to choose one style and use it everywhere. It is up to you as a designer which style you choose.
+    </p>
+
+    <h3>Tables</h3>
+    <p>
+      Tabular data allows displaying a big amount of information in a relatively small space in a structured way.
+
+      We are usually dealing with a big amount of information, so we need to be really careful and consistent with all design aspects so the data are easy to read and understand.
+
+      Consistency in the font, font-sizes, spacing, border sizes, color is crucial to provide a structure when dealing with big data is not painful.
+    </p>
+
+    <h3>Spacing</h3>
+    <p>
+      Keeping spacing consistent around text blocks, headers,
+      buttons, icons, cards, form elements are something which will become second nature as you gain more experiences.
+
+      You should never position an element on the canvas without thinking about its effect on all the other elements and
+      structure.
+
+      Guides are vertical and horizontal lines used in tools like Adobe Xd which will help you to have the consistency of spacing under control.
+
+      The size of the spacing might be based on the grid you are working with or your personal preferences but you will always need to apply consistency.
+    </p>
+
+    <h3>Icons</h3>
+    <p>
+      Working with icons requires some elementary rules.
+      You should be using icons from icon-set produced by a professional designer. All the icons in the application need to be the same style to keep it consistent.
+
+      It does not mean your icons need to be monochromatic you can use icons with the same style and still use different colors, but visually, they need to be part of the same visual family.
+
+      You can see on the left image that there are two icons which do not really fit even they might be the same size. They are not only multi-color while the others are monochrome, but they are also representing a totally different style.
+    </p>
+
+    <h3>Form Elements</h3>
+    <p>
+      Consistency in form elements is defined by equal spacing, font and font sizes, border styles and border height,
+      placement of labels, buttons and so on.
+
+      The application usually deals with lots of forms. Your job is to
+      provide a clear structure where the form does not feel too heavy and discourages users from filling it in.
+
+      Using consistent label alignments and font styles allows users to scan the form content easily.
+
+      Having consistent input styles allows users to understand which element needs to be filled in and which one is just description or comment.
+    </p>
+
+    <h3>Fonts</h3>
+    <p>
+      When applying font variety less is always more, especially when working on application design.
+
+      In most cases, three types of font-families should be more than enough for your project.
+
+      Applying a font consistent way is a sign of great design.
+
+      You should always look for branding guideline of the project first when applying fonts.
+
+      Font consistency means that all your body text will use the same font, all your labels, numbers, headers, form elements and so on should always use the same font.
+    </p>
+
+    <h3>Colors</h3>
+    <p>
+      Color consistency comes down to strict color palette.
+
+      Any element you design on a project needs to be built by using one of the colors from the color palette. You should not be introducing new colors outside color palette.
+
+      As you can see in the example on the right, there are only a few colors used to build the interface.
+
+      The exact same blue color is used on icons, charts and buttons.
+
+      It is up to you as a designer to decide which color will be used and when but you should always follow rules of consistency.
+    </p>
+
+  </div>
+
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

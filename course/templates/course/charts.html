@@ -1,0 +1,51 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=43 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="charts" navgroup="ui-elements" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="04 UI Elementa" header_two="Charts" %}
+  {% include 'course/partials/data.html' with current_lesson=43 video_length="14:06" %}
+  {% include 'course/partials/tabs.html' %}
+  {% include 'course/partials/video.html' with id=354903424 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li><a href="/course/media/charts.xd" download>Charts - Adobe Xd File</a></li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      Charts are used to display tabular data in a way where single glass provide the data sequence, progress or direction.
+
+      There are many chart types used in applications but the most used and the easiest for a user to understand are:
+    </p>
+
+    <ul>
+      <li>Bar charts</li>
+      <li>Line charts</li>
+      <li>Pie charts</li>
+      <li>Doughnut charts</li>
+    </ul>
+    <p>
+      The most common use of charts is dashboards, mainly on financial products.
+    </p>
+    </p>
+
+  </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

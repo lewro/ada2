@@ -1,0 +1,39 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=45 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="steps" navgroup="ui-elements" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="04 UI Elementa" header_two="Steps" %}
+  {% include 'course/partials/data.html' with current_lesson=45 video_length="09:19" %}
+  {% include 'course/partials/tabs.html' %}
+  {% include 'course/partials/video.html' with id=354929305 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li><a href="/course/media/steps.xd" download>Steps - Adobe Xd File</a></li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      Steps are a great tool when you need to divide complex flows so the user does not feel overwhelmed.
+
+      The clear visual indicator of the current step needs to be presented so the user does not feel lost and knows how many more steps he/she need to accomplish.
+    </p>
+  </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

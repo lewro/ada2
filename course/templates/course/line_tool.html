@@ -1,0 +1,42 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=24 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="line-tool" navgroup="adobe-xd" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="03 Adobe Xd" header_two="Line Tool" %}
+  {% include 'course/partials/data.html' with current_lesson=24 video_length="01:23" %}
+  {% include 'course/partials/tabs.html' with nofiles="nofiles" %}
+  {% include 'course/partials/video.html' with id=354484547 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li>No Files</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      Line Tool is used for separating of UI elements visually but having too many borders and too strong borders bring visual noise which should be avoided.
+
+      Light borders are great separators as well as dashed borders.
+
+      It is important to keep consistent spacing around borders to keep the structure clean.
+    </p>
+  </div>
+
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

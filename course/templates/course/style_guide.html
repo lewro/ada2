@@ -1,0 +1,47 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=8 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="visual-noise" navgroup="design-basics" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="02 Design Basics" header_two="Visual Noise" %}
+  {% include 'course/partials/data.html' with current_lesson=8  video_length="01:35" %}
+  {% include 'course/partials/tabs.html' with nofiles="nofiles" %}
+  {% include 'course/partials/video.html' with id=353199717 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li>No Files</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      You should do your best to bring the focus into the element that is really important and reduce the visual weight from
+      everything else.
+
+      You should always ask yourself these questions.
+
+      Is there anything I could remove to provide better clarity?
+      Is it clear what information is primary and what
+      secondary?
+
+      Separation of individual elements is great unless it is bringing more attention than the actual content. Remember content is the king.
+    </p>
+  </div>
+
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

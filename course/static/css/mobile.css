@@ -1,0 +1,80 @@
+@media screen and (max-width: 780px) {
+  .hero h1 {
+    font-size: 50px;
+    margin: 200px 25px 25px 25px;
+    line-height: 1em;
+  }
+
+  #logo {
+    margin-bottom: 0px;
+  }
+
+  .stranger #logo {
+    width: 200px;
+  }
+
+  .top a {
+    float: left;
+    margin-left: 20px;
+  }
+
+  .top a.login {
+    clear: both;
+  }
+
+  .img-samples {
+    width: 100%;
+  }
+
+  .enroll  {
+    padding: 25px;
+  }
+
+  .enroll a  {
+    padding: 25px 50px;
+  }
+
+  #sidebar {
+    position: absolute;
+    width: 70%;
+    z-index: 99;
+    display: none;
+    border-right: 5px solid #ddd;
+  }
+
+  #show-sidebar {display: block;}
+  #close-sidebar {display: none;}
+
+  #content {
+    width: 100%;
+    padding: 100px 25px;
+  }
+
+  .stranger .content {
+    padding: 25px;
+  }
+
+  .data-primary {
+    padding-right: 20px;
+  }
+
+  .data-secondary  {
+    padding-right: 0px;
+  }
+
+  .footer-form .form-submit,
+  .footer-form {
+    width: 100%;
+  }
+
+  footer  {
+    text-align: center;
+  }
+
+  footer ul {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+}
+

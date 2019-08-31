@@ -1,0 +1,42 @@
+{% extends "course/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=19 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="layers" navgroup="adobe-xd" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="03 Adobe Xd" header_two="Artboards & Layers" %}
+  {% include 'course/partials/data.html' with current_lesson=19 video_length="07:15" %}
+  {% include 'course/partials/tabs.html' %}
+  {% include 'course/partials/video.html' with id=354477452%}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li><a href="/course/media/artboard.xd" download>Artboards & Shapes - Adobe Xd File</a></li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>Artboards typically represent each of the screens that you want to design as part of your application.
+      You can have many artboards in a single Adobe XD file.
+      You can choose a preset size for the artboard at the beginning of your project from the Start screen.
+    </p>
+    <p>By default, each object in your project resides on its own layer. For example, when you draw a rectangle, a new layer for this rectangle is created. When you draw another rectangle, a separate layer is created.
+    </p>
+  </div>
+
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

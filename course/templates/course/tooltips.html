@@ -1,0 +1,41 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=37 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="tooltips" navgroup="ui-elements" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="04 UI Elementa" header_two="Tooltip" %}
+  {% include 'course/partials/data.html' with current_lesson=37 video_length="07:25" %}
+  {% include 'course/partials/tabs.html' %}
+  {% include 'course/partials/video.html' with id=354867996 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li><a href="/course/media/tooltips.xd" download>Tooltips - Adobe Xd File</a></li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      Tooltips display informative text when users hover, click or tap an element.
+
+      Tooltips often display navigation text when the user hovers over the icon in the navigation. They can also display information block which consists of images, icons, chips, text.
+
+      It is up to you as a designer to decide which information needs to be visible at all times and which can be hidden and show in the tooltip as a reaction on the user’s action.
+    </p>
+  </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

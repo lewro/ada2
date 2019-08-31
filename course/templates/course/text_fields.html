@@ -1,0 +1,48 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=32 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="text-fields" navgroup="ui-elements" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="04 UI Elementa" header_two="Text Fields" %}
+  {% include 'course/partials/data.html' with current_lesson=32 video_length="07:13" %}
+  {% include 'course/partials/tabs.html' %}
+  {% include 'course/partials/video.html' with id=354310776 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li><a href="/course/media/textfields.xd" download>Text Fields - Adobe Xd File</a></li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      Text fields are an elementary part of any application.
+
+      Inputs belong to forms and they are used to fill a database with data which are then displayed in views.
+
+      There are various way text fields can be displayed.  Text fields have four different states which need to be designed.
+    </p>
+    <ul>
+      <li>Default text field - when the view loads</li>
+      <li>The text field in focus - when a user clicks on taps into it</li>
+      <li>Invalid text field</li>
+      <li>Valid text field</li>
+    </ul>
+
+  </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

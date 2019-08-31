@@ -1,0 +1,43 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=9 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="balance" navgroup="design-basics" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="02 Design Basics" header_two="Balance" %}
+  {% include 'course/partials/data.html' with current_lesson=9  video_length="02:23" %}
+  {% include 'course/partials/tabs.html' with nofiles="nofiles" %}
+  {% include 'course/partials/video.html' with id=353360999 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li>No files</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      Keeping user-interface elements balanced brings a high level of quality to your designs.
+
+      Bringing balance to individual elements or set of elements is crucial but luckily math and symmetry can help.
+
+      Have a look at example 1 where the text in the button is way too big on the other hand in example 2 where the button is
+      divided into 3 equal parts the text feels just right.
+    </p>
+  </div>
+
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

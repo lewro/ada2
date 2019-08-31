@@ -1,0 +1,42 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=44 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="menus" navgroup="ui-elements" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="04 UI Elementa" header_two="Menus" %}
+  {% include 'course/partials/data.html' with current_lesson=44 video_length="08:50" %}
+  {% include 'course/partials/tabs.html' %}
+  {% include 'course/partials/video.html' with id=354926262 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li><a href="/course/media/menu.xd" download>Menus - Adobe Xd File</a></li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      A menu displays a list of choices. They are hidden by default and get displayed when the user either clicks/taps or hover over a predefined element.
+
+      They are often used in primary application navigation. Menu elements can consist of text or text with an icon.
+
+      A simple menu is only one level deep while complex menu can contain cascading menus where parent element in the main menu contains a secondary menu which appears when a user hovers over that element. Triangle is used to indicate there is a secondary menu available.w
+   </p>
+
+  </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

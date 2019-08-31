@@ -1,0 +1,46 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=14 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="color-palette" navgroup="design-basics" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="02 Design Basics" header_two="Color palette" %}
+  {% include 'course/partials/data.html' with current_lesson=14  video_length="01:39" %}
+  {% include 'course/partials/tabs.html' with nofiles="nofiles" %}
+  {% include 'course/partials/video.html' with id=353374139 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li>No Files</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      When building your color palett for an application you should always start from black, white and grays. These primary colors are the best suited for user interfaces as allow people to
+      concentrate on the actual content.
+
+      Your secondary set of colors will be based on the actual
+      company branding, design guidelines or you can simply pick two, tree colors which you will use for some of the UI elements like buttons, icons etc. If your project includes multi-color
+      elements like charts you will need to prepare a tercial set of colors, this could require 12, 24 or even more colors
+      depending on the project need.
+
+      Creating light options from your color is simple. Position the color layer on white layer and adjust the opacity accordingly 80/60/40/20/10 %.
+    </p>
+  </div>
+
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=25 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="color" navgroup="adobe-xd" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="03 Adobe Xd" header_two="Color" %}
+  {% include 'course/partials/data.html' with current_lesson=25 video_length="02:06" %}
+  {% include 'course/partials/tabs.html' with nofiles="nofiles" %}
+  {% include 'course/partials/video.html' with id=354484836 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li>No Files</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      Color can be applied to any visual element. Rectangle, ellipse, line, text.
+
+      Color can be applied in two ways either as a filler or as a border. Color can be picked from a color picker or eye picker can be used to pick an existing color from the interface.
+
+      Additionally, you can reduce the opacity of the object to make it transparent those reducing the strength of the color. Please note that reducing opacity will make the object semi-transparent depending on the percentage you set. The layer positioned below the current layer will be partially visible.
+    </p>
+  </div>
+
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

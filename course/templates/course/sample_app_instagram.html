@@ -1,0 +1,44 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=65 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="sample-app-instagram" navgroup="application-design" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="06 Application Design" header_two="Sample App. - Instagram" %}
+  {% include 'course/partials/data.html' with current_lesson=51 video_length="48:51" %}
+  {% include 'course/partials/tabs.html' %}
+  {% include 'course/partials/video.html' with id=355866710 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li><a href="/course/media/instagram.xd" download>Instagram - Adobe Xd File</a></li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      We will be replicating Instagram profile view with a little bit of design direction.
+
+      We are keeping most of the functionality but changing layout, colours, icons and typography a little bit.
+
+      The goal of this exercise is to practice spacing, use of basic shapes and icons.
+
+      Colour theme was inspired by the Instagram icon.
+    </p>
+
+  </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

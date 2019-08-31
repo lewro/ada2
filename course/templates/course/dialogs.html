@@ -1,0 +1,40 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=39 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="dialogs" navgroup="ui-elements" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="04 UI Elementa" header_two="Dialogs" %}
+  {% include 'course/partials/data.html' with current_lesson=39 video_length="09:47" %}
+  {% include 'course/partials/tabs.html' %}
+  {% include 'course/partials/video.html' with id=354879118 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li><a href="/course/media/dialogs.xd" download>Dialogs - Adobe Xd File</a></li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      Dialogs inform users about a task which requires user action.
+      It is often used to confirm delete action or in cases where the application is requesting user permissions.
+      It can also be used to as multi-choice dialog where the user is requested to choose from multiple options.
+  </p>
+
+  </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

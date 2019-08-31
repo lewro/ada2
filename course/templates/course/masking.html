@@ -1,0 +1,42 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=29 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="masking" navgroup="adobe-xd" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="03 Adobe Xd" header_two="Masking" %}
+  {% include 'course/partials/data.html' with current_lesson=29 video_length="03:05" %}
+  {% include 'course/partials/tabs.html' with nofiles="nofiles" %}
+  {% include 'course/partials/video.html' with id=354486755 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li>No Files</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      Applying group masking to two or more layers means that you are limiting the visibility of a portion of one layer by another layer object.
+
+      In the example on the right, you can see an image which is a lot bigger than the rectangle object. Creating a group mask only shows the portion of the image which fits into the rectangle object.
+
+      None of these changes is destructive, you can come later and move the image around to show a different part to the image.
+    </p>
+  </div>
+
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

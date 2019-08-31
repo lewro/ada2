@@ -1,0 +1,42 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=73 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="sample-app-iterations" navgroup="application-design" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="06 Application Design" header_two="Iterations" %}
+  {% include 'course/partials/data.html' with current_lesson=53 video_length="07:27" %}
+  {% include 'course/partials/tabs.html' %}
+  {% include 'course/partials/video.html' with id=356131343 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li><a href="/course/media/iterations.xd" download>Iterations - Adobe Xd File</a></li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      You might be asked to provide several different versions of the same view and work on additional iterations later.
+
+      In another case, one version could be enough but you usually end up providing iterations based on customer (manager) feedback.
+
+      Iterations and versions are part of the standard workflow. Your first version represents your idea of how you understand the spec and with every iteration, you are getting closer to the final product.
+    </p>
+
+  </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

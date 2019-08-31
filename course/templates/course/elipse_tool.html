@@ -1,0 +1,42 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=23 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="elipse-tool" navgroup="adobe-xd" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="03 Adobe Xd" header_two="Elipse Tool" %}
+  {% include 'course/partials/data.html' with current_lesson=23 video_length="02:04" %}
+  {% include 'course/partials/tabs.html' with nofiles="nofiles" %}
+  {% include 'course/partials/video.html' with id=354483283 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li>No Files</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      Ellipse Tool is used in application design mainly for avatars & icon backgrounds.
+
+      You can create ellipse by selecting the ellipse tool then drag diagonally. Press Shift on the keyboard to draw a perfect circle.
+
+      You can change the height and width of the rectangle anytime by simply dragging its borders.
+    </p>
+  </div>
+
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

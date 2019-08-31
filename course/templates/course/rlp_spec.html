@@ -1,0 +1,42 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=75 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="specs" navgroup="real-life-project" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="07 Real-life project" header_two="Specification" %}
+  {% include 'course/partials/data.html' with current_lesson=54 video_length="02:39" %}
+  {% include 'course/partials/tabs.html' %}
+  {% include 'course/partials/video.html' with id=356652072 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li><a href="/course/media/spec.pdf" download>Spec - PDF File</a></li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      As an application designer, you will be getting the specification from your clients or managers based on which you will be providing your wireframes and design mockups.
+
+      The specification is quite often provided in spreadsheet, text document or even hand-drawn image.
+
+      Take time to study the specification and ask questions. You need to understand the project and all the functionality of the application so you can provide good solutions to those individual challenges.
+    </p>
+
+  </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=13 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="color-contrast" navgroup="design-basics" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="02 Design Basics" header_two="Color contrast" %}
+  {% include 'course/partials/data.html' with current_lesson=13  video_length="01:35" %}
+  {% include 'course/partials/tabs.html' with nofiles="nofiles" %}
+  {% include 'course/partials/video.html' with id=353368854 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li>No Files</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      Providing color contrast is a powerful weapon but its absence could make your application unusable. When there is not enough contrast, users will simply not be able use it.
+
+      There are color contrast checkers on the web which can give you a ratio when comparing two colors trying to find out if there is enough contrast.
+
+      Using color and color contrast in typography is a great way of building information hierarchy in the view.
+    </p>
+  </div>
+
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

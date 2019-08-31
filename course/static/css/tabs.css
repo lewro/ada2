@@ -1,0 +1,59 @@
+ul.tabs {
+  border-bottom: 1px solid #ddd;
+  background: none;
+  height: auto;
+  line-height: auto;
+}
+
+ul.tabs .tab a {
+  font-size: 11px;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 15px 35px;
+  color: #666;
+  cursor: pointer;
+  height: auto;
+  line-height: 1em;
+}
+
+ul.tabs .nofiles a {
+  display: none;
+}
+
+ul.tabs .indicator {
+  background-color: #2189FF;
+  height: 1px;
+}
+
+ul.tabs .tab a.active,
+ul.tabs .tab a:hover{
+  color: #999 !important;
+  font-weight: 500;
+}
+
+ul.tabs .tab a:focus,
+ul.tabs .tab a:focus.active {
+  background-color: #f9f9f9;
+  color: #000;
+}
+
+.tab-content {
+  padding: 25px 0;
+}
+
+.tab-content p {
+  width: 75%;
+}
+
+.tab-content a:hover {
+  color: #999;
+}
+
+.tab-content ul {
+  margin: 20px;
+}
+
+.tab-content li {
+  padding-bottom: 10px;
+  list-style-type: square !important;
+}

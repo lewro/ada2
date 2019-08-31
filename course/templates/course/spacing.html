@@ -1,0 +1,42 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=15 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="spacing" navgroup="design-basics" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="02 Design Basics" header_two="Spacing" %}
+  {% include 'course/partials/data.html' with current_lesson=15  video_length="02:55" %}
+  {% include 'course/partials/tabs.html' with nofiles="nofiles" %}
+  {% include 'course/partials/video.html' with id=353378005 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li>No Files</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      The golden rule of application design is: Measure everything and keep it consistent.
+
+      It’s up to you as a designer to choose the spacing but it needs to be consistent across all your design files.
+
+      Once you set the spacing for example between your header and sub-header you should keep it consistent and use the same spacing in all your files.
+    </p>
+  </div>
+
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

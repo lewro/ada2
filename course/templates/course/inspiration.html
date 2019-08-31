@@ -1,0 +1,43 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=2 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="inspiration" navgroup="introduction" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="01 Introduction" header_two="Inspiration" %}
+  {% include 'course/partials/data.html' with current_lesson=2 video_length="01:26" %}
+  {% include 'course/partials/tabs.html' with nofiles="nofiles" %}
+  {% include 'course/partials/video.html' with id=353245641 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li>No Files</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>There are three major resources for information.</p>
+
+    <ul>
+      <li><a href="https://dribbble.com">Dribbble</a></li>
+      <li><a href="https://behance.com">Behance</a></li>
+      <li><a href="https://pinterest.com">Pinterest</a></li>
+    </ul>
+
+    <p>Do not use these resources only as a source of inspiration. Try to look at them as solutions to a problem someone else has already solved and try to learn from it.</p>
+  </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

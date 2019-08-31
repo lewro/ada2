@@ -1,0 +1,44 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=10 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="iconography" navgroup="design-basics" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="02 Design Basics" header_two="Iconography" %}
+  {% include 'course/partials/data.html' with current_lesson=10  video_length="01:37" %}
+  {% include 'course/partials/tabs.html' with nofiles="nofiles" %}
+  {% include 'course/partials/video.html' with id=353364195 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li>No Files</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      Icon can be defined as an image which has a high symbolic value and is used for the purpose of communication. Icons communicate via the images showing pictorial resemblance with an object of the physical world.
+
+      They are used in the modern interface to support its usability and provide the successful flow of human-computer
+      interaction.
+
+      One of the most important benefits is the ability to replace the text especially in interfaces used by users from various
+      countries speaking different languages.
+    </p>
+  </div>
+
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

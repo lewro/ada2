@@ -1,0 +1,46 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=46 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="snackbars" navgroup="ui-elements" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="04 UI Elementa" header_two="Snackbars" %}
+  {% include 'course/partials/data.html' with current_lesson=46 video_length="03:20" %}
+  {% include 'course/partials/tabs.html' %}
+  {% include 'course/partials/video.html' with id=354929397 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li><a href="/course/media/snackbar.xd" download>Snackbars - Adobe Xd File</a></li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      Snackbars are used to inform the user of the action they need to take or results of actions which has already taken place.
+
+      Snackbars are often used for confirmation messages such are the creation of new object, removal or update of the existing object.
+
+      Error messages are often displayed in scnackbars.
+
+      Snackbar can contain text, text with an icon and or with a button.
+
+      Some snackers are set to hide automatically others need to be closed by clicking the close button.
+    </p>
+
+  </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

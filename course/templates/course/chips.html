@@ -1,0 +1,52 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=36 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="chips-element" navgroup="ui-elements" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="04 UI Elementa" header_two="Chips" %}
+  {% include 'course/partials/data.html' with current_lesson=36 video_length="10:19" %}
+  {% include 'course/partials/tabs.html' %}
+  {% include 'course/partials/video.html' with id=354858782 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li><a href="/course/media/chips.xd" download>Chips - Adobe Xd File</a></li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      Chip is a great tool to display information in a clear and visually interesting way.
+
+      They can be used to replace a simple list of options as an alternative to radio buttons or checkboxes.
+
+      They are also used as a list of information, tags for example.
+
+      Chips are used in many different ways.
+  </p>
+
+  <ul>
+    <li>Text </li>
+    <li>Text with icon, image or avatar</li>
+    <li>Text with action button  (e.g. “delete”)</li>
+  </ul>
+    <po>
+       Chips could be informational only or selectable with hover & selected state.
+    </p>
+  </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

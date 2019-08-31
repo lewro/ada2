@@ -1,0 +1,39 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=20 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="history-tool" navgroup="adobe-xd" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="03 Adobe Xd" header_two="History Tool" %}
+  {% include 'course/partials/data.html' with current_lesson=20 video_length="01:47" %}
+  {% include 'course/partials/tabs.html' with nofiles="nofiles" %}
+  {% include 'course/partials/video.html' with id=354478242 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li>No Files</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      History tool is used heavily in the design process. Not only you can revert any changes you might have done by mistake but also allows you to switch between two historical changes back and forth and see which of those options works better for your project.
+   </p>
+
+  </div>
+
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

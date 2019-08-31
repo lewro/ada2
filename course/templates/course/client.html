@@ -1,0 +1,46 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=100%}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="client" navgroup="portfolio-client" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="08 Portfolio-Client" header_two="Client" %}
+  {% include 'course/partials/data.html' with current_lesson=62 video_length="02:17" %}
+  {% include 'course/partials/tabs.html' with nofiles="nofiles" %}
+  {% include 'course/partials/video.html' with id=356653849 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li>No Files</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+
+    <h3>Communication</h3>
+    <p>Talk to your client daily. Inform them about your progress. Ask them for feedback. Make them feel they have control over the project. </p>
+
+    <h3>Ego</h3>
+    <p>Leave your ego at home. Be nice, polite and do not push your opinions on the client. Try to see it from their side and offer solutions, variations, iterations.</p>
+
+    <h3>Your name is the only thing you have</h3>
+    <p>Remember that most of the work is passed by recommendations. Always make a good impression. Be on time. Reach all deadlines and if you can’t overcommunicate.</p>
+
+    <p>Your client is paying for the project and he needs to be happy during the process and after the work has been done. </p>
+
+  </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

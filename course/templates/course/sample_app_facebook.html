@@ -1,0 +1,42 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=70 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="sample-app-facebook" navgroup="application-design" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="06 Application Design" header_two="Sample App. - Facebook" %}
+  {% include 'course/partials/data.html' with current_lesson=52 video_length="47:14" %}
+  {% include 'course/partials/tabs.html' %}
+  {% include 'course/partials/video.html' with id=355940711 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li><a href="/course/media/facebook.xd" download>Facebook - Adobe Xd File</a></li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      In this exercise will be replicating simplified facebook interface.
+
+      A web version of Facebook on a large canvas.
+
+      We will be practising the use of basic shapes, icons, colors, and layout for a web application.
+    </p>
+
+  </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

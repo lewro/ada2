@@ -1,0 +1,47 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=92 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="design-guide" navgroup="real-life-project" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="07 Real-life project" header_two="Design Guide" %}
+  {% include 'course/partials/data.html' with current_lesson=59 video_length="01:33:29" %}
+  {% include 'course/partials/tabs.html' %}
+  {% include 'course/partials/video.html' with id=356950382 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li><a href="/course/media/designguide.xd" download>Design Guide Individual Elements - Adobe Xd File</a></li>
+      <li><a href="/course/media/designguidefull.xd" download>Design Guide Full - Adobe Xd File</a></li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      In this lesson, we will extract all the UI elements from our design mockups into Design Guide document.
+      Design guide should contain all the aspects of application design:
+    </p>
+
+    <ul>
+      <li>Typography</li>
+      <li>Iconography</li>
+      <li>UI Elements</li>
+      <li>Colour palette</li>
+    </ul>
+
+  </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=51 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="application-interface" navgroup="wireframes" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="05 Wireframing" header_two="Interface" %}
+  {% include 'course/partials/data.html' with current_lesson=48 video_length="22:43" %}
+  {% include 'course/partials/tabs.html' %}
+  {% include 'course/partials/video.html' with id=355571376 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li><a href="/course/media/wireframingadvanced.xd" download>Wireframing Interface - Adobe Xd File</a></li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      Creating high fidelity wireframe requires using all the standard rules of good design.
+
+      It provides clients with a clear visual understanding of what the product’s functionality is, what are the interface components, layout.
+
+      Without wireframes, you are putting your team at risk of repetition and misunderstandings.
+    </p>
+
+  </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

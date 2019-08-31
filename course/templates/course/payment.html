@@ -1,0 +1,68 @@
+{% extends "account/base.html" %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col s12 m6 l6 left">
+    <div class="content payment-success">
+      <i class="far fa-check-circle"></i>
+      <h1>Congratulations <span class="name"></span>! The payment was successful.</h1>
+      <a class="button" href="/start">Start Your Course</a>
+    </div>
+    <div class="content">
+      <h1>Payment</h1>
+
+      <p>Thank you for choosing Application Design Academy.</p>
+
+      <p>Please, choose your payment method bellow.</p>
+
+      <p>The price of the course is USD 1000.</p>
+
+
+      <!-- Set up a container element for the button -->
+      <div id="paypal-button-container" class="vrithm"></div>
+
+      <!-- Include the PayPal JavaScript SDK -->
+      <script src="https://www.paypal.com/sdk/js?client-id=AaQjzhHTFxK22yHNfbbyszDHUbD3-d-lFPfGRdarryrfoivBfc8hgski3YgTwt2eXkjlxHQMBaV5aCqf&currency=USD"></script>
+
+      <script>
+          // Render the PayPal button into #paypal-button-container
+          paypal.Buttons({
+
+              // Set up the transaction
+              createOrder: function(data, actions) {
+                  return actions.order.create({
+                      purchase_units: [{
+                          amount: {
+                              value: '1000'
+                          }
+                      }]
+                  });
+              },
+
+              // Finalize the transaction
+              onApprove: function(data, actions) {
+                  return actions.order.capture().then(function(details) {
+
+                      var url = "/set_customer_as_paid/"
+                      var xhttp = new XMLHttpRequest();
+                      xhttp.open("POST", url, true);
+                      xhttp.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");
+                      xhttp.send();
+
+                      $('.name').html(details.payer.name.given_name);
+                      $('.payment-success').show();
+
+                  });
+              }
+
+
+          }).render('#paypal-button-container');
+      </script>
+
+   </div>
+  </div>
+  <div class="col s12 m6 l6 right" id="payment-aw">
+  </div>
+</div>
+{% endblock %}

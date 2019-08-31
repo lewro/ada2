@@ -1,0 +1,39 @@
+
+<div class="footer-form-btn">
+  <i class="fas fa-comments"></i>
+</div>
+
+<div class="footer-form">
+  <div class="footer-message-top clearfix">
+    <div class="close-fm">
+      <i class="fas fa-times-circle"></i>
+    </div>
+
+    <h2>Hi. Need help?</h2>
+    <p>I am here to help. I would highly recommend doing a search on google first, though. Why? This is the common practice among all designers. Whenever we get stuck or trying to solve a problem, we use google. It's part of the workflow.</p>
+
+    <p>If you still can't find a solution to your question or problem feel free to contact me by typing your question below. You will receive reply by email. </p>
+
+    <p>You have 2 hours in total of reply time available. Example: If answer to your question takes 5 minutes to write you can ask 20 questions during the course.</p>
+
+    <p>Roman</p>
+  </div>
+
+  <form action="/contact/" method="post" id="contact-form">
+  {% csrf_token %}
+  <div class="form-cover">
+    <div class="input-field hidden">
+      <input type="email" id="id_email_ff" name="email" value="{{ request.user.email }}" data-required="true" />
+      <label id="id_email__ff">Email</label>
+    </div>
+    <div class="input-field">
+      <textarea type="text" id="id_message" name="message" data-required="true"></textarea>
+    </div>
+    <span class="overline">Time spent so far: {{ time_spent }} minutes</span>
+    <div class="progress-bar"><div class="progress-indicator" style="width: {{ time_percent }}%"></div></div>
+  </div>
+
+
+  <input class="form-submit" type="submit" value="Send" />
+  </form>
+</div>

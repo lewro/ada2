@@ -1,0 +1,39 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=41 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="tables" navgroup="ui-elements" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="04 UI Elementa" header_two="Tables" %}
+  {% include 'course/partials/data.html' with current_lesson=41 video_length="09:16" %}
+  {% include 'course/partials/tabs.html' %}
+  {% include 'course/partials/video.html' with id=354893511 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li><a href="/course/media/tables.xd" download>Tables - Adobe Xd File</a></li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      Tables are a great tool to display a huge amount of data in a structured way.
+      Keeping tables visually light helps users to work with tables.
+      You should provide enough spacing in table rows and header and avoid using strong heavy lines to avoid visual noise.
+    </p>
+  </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

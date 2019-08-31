@@ -1,0 +1,48 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=16 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="composition" navgroup="design-basics" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="02 Design Basics" header_two="Composition" %}
+  {% include 'course/partials/data.html' with current_lesson=16  video_length="03:49" %}
+  {% include 'course/partials/tabs.html' with nofiles="nofiles" %}
+  {% include 'course/partials/video.html' with id=353380176 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li>No Files</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      There is no single way to display any type of information.
+
+      In the example, you can see that the same information can be displayed in many different ways, and they all can work
+      depending on the use case.
+
+      You should be asking yourself constantly question:
+
+      What is the importance/priority of the information?
+      How much real estate there is available?
+      How does the element look when there is only one and how does it look when there are more of them?
+      Does it accommodate for longer text?
+    </p>
+  </div>
+
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

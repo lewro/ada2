@@ -1,0 +1,42 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=56 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="interactive-prototype" navgroup="wireframes" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="05 Wireframing" header_two="Interactive Prototype" %}
+  {% include 'course/partials/data.html' with current_lesson=50 video_length="01:57" %}
+  {% include 'course/partials/tabs.html' %}
+  {% include 'course/partials/video.html' with id=356370796 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li><a href="/course/media/prototype.xd" download>Prototype - Adobe Xd File</a></li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      Prototyping is a great tool to mimic the behaviour of the application. Prototyping software allows you to connect two static images the way that you can tap on a predefined area on the first image and show another image.
+
+      A prototype allows your clients to test the user flows the way the application users would but with creation limitations. You can’t enter any text for example.
+
+      There are various tools you can use to create a prototype. Adobe Xd has already prototyping build in but you could also use web apps like Marvelapp or Invision.
+    </p>
+
+  </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

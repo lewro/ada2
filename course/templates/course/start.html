@@ -1,0 +1,111 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=1 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="course-structure" navgroup="introduction" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="01 Introduction" header_two="Course structure" %}
+  {% include 'course/partials/data.html' with current_lesson=1 video_length="02:18" %}
+  {% include 'course/partials/tabs.html' with nofiles="nofiles" %}
+  {% include 'course/partials/video.html' with id=353199717 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li>No Files</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      The course consists of two parts. Theoretical which takes about 20% and Practical with 80%. Theoretical includes the modules 1,2,8 and practical includes modules 3,4,5,6,7.
+    </p>
+
+    <div class="course-modules vrithm">
+        <div class="row">
+          <div class="col s12 m6 l3" id="introduction-box">
+            <div class="box">
+              <div class="box-content">
+                <h3>5 Lessons</h3>
+                <h2>Introduction</h2>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l3" id="designbasics-box">
+            <div class="box">
+              <div class="box-content">
+                <h3>13 Lessons</h3>
+                <h2>Design Basics</h2>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l3" id="adobexd-box">
+            <div class="box">
+              <div class="box-content">
+                <h3>13 Lessons</h3>
+                <h2>Adobe Xd</h2>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l3" id="uielements-box">
+            <div class="box">
+              <div class="box-content">
+                <h3>15 Lessons</h3>
+                <h2>UI Elements</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 m6 l3" id="wireframing-box">
+            <div class="box">
+              <div class="box-content">
+                <h3>2 Lessons</h3>
+                <h2>Wireframing</h2>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l3" id="applicationdesign-box">
+            <div class="box">
+              <div class="box-content">
+                <h3>3 Lessons</h3>
+                <h2>Application Design</h2>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l3" id="reallifeproject-box">
+            <div class="box">
+              <div class="box-content">
+                <h3>7 Lessons</h3>
+                <h2>Real-life Project</h2>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l3" id="portfolio-box">
+            <div class="box">
+              <div class="box-content">
+                <h3>2 Lessons</h3>
+                <h2>Portfolio / Client</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </p>
+  </div>
+
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=26 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="gradient" navgroup="adobe-xd" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="03 Adobe Xd" header_two="Gradient" %}
+  {% include 'course/partials/data.html' with current_lesson=26 video_length="02:51" %}
+  {% include 'course/partials/tabs.html' with nofiles="nofiles" %}
+  {% include 'course/partials/video.html' with id=354485171 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li>No Files</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      A gradient is a tool which allows you to create a visual effect where two or more colors blend smoothly together.
+
+      You can choose the colors and the direction in which the colors blend. The gradient can be either linear or radial.
+
+      You can even set the direction for linear gradient: horizontal, vertical, diagonal is the basic but you can choose any angle.
+
+      In application design, there are often used smooth gradients for elements like buttons or background for big text elements where you use two shades of the same color to provide just a bit of plasticity as it is done on the example on the right.
+    </p>
+  </div>
+
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

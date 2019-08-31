@@ -1,0 +1,154 @@
+#navigation {
+  font-size: 12px;
+  min-height: 1500px;
+}
+
+#close-sidebar, #show-sidebar {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+#show-sidebar {display: none;}
+#close-sidebar {display: block;}
+
+#signout {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  background: #ddd;
+  color: #000;
+  border-radius: 100px;
+  font-size: 15px;
+  line-height: 15px;
+  padding: 15px;
+}
+
+#signout:hover {
+  background: #000;
+  color: #fff;
+}
+
+#navigation h2 {
+  font-size: 12px;
+  font-weight: 300;
+  padding: 10px 25px;
+  cursor: pointer;
+  color: #000;
+}
+
+#navigation h2.active {
+  font-weight: bold;
+  color: #2189FF;
+}
+
+#navigation a {
+  color: #666;
+}
+
+#navigation ul li a {
+  display: block;
+  padding: 10px 35px 10px 50px;
+  cursor: pointer;
+}
+
+#navigation ul li.active a,
+#navigation ul li:hover a {
+  background-color: #2189FF;
+  color: #fff;
+}
+
+#navigation ul {
+  display: none;
+}
+
+#navigation.introduction .introduction,
+#navigation.design-basics .design-basics,
+#navigation.adobe-xd .adobe-xd,
+#navigation.ui-elements .ui-elements,
+#navigation.wireframes .wireframes,
+#navigation.application-design .application-design,
+#navigation.real-life-project .real-life-project,
+#navigation.portfolio-client .portfolio-client {
+  display: block;
+}
+
+#navigation.introduction h2.introduction,
+#navigation.design-basics h2.design-basics,
+#navigation.adobe-xd h2.adobe-xd,
+#navigation.ui-elements h2.ui-elements,
+#navigation.wireframes h2.wireframes,
+#navigation.application-design h2.application-design,
+#navigation.real-life-project h2.real-life-project,
+#navigation.portfolio-client h2.portfolio-client {
+  font-weight: bold;
+}
+
+
+#navigation.course-structure .course-structure a,
+#navigation.inspiration .inspiration a,
+#navigation.tools .tools a,
+#navigation.future .future a,
+#navigation.benefits .benefits a,
+#navigation.grid .grid a,
+#navigation.separation .separation a,
+#navigation.visual-noise .visual-noise a,
+#navigation.balance .balance a,
+#navigation.iconography .iconography a,
+#navigation.typography-fundation .typography-fundation a,
+#navigation.typography-scale .typography-scale a,
+#navigation.color-contrast .color-contrast a,
+#navigation.color-palette .color-palette a,
+#navigation.spacing .spacing a,
+#navigation.composition .composition a,
+#navigation.consistency .consistency a,
+#navigation.resources .resources a,
+#navigation.layers .layers a,
+#navigation.history-tool .history-tool a,
+#navigation.zoom-tool .zoom-tool a,
+#navigation.rectangle-tool .rectangle-tool a,
+#navigation.elipse-tool .elipse-tool a,
+#navigation.line-tool .line-tool a,
+#navigation.color .color a,
+#navigation.gradient .gradient a,
+#navigation.drop-shadow .drop-shadow a,
+#navigation.transparency .transparency a,
+#navigation.masking .masking a,
+#navigation.text-tool .text-tool a,
+#navigation.font-icons .font-icons a,
+#navigation.text-fields .text-fields a,
+#navigation.buttons .buttons a,
+#navigation.sliders .sliders a,
+#navigation.selection-controls .selection-controls a,
+#navigation.chips-element .chips-element a,
+#navigation.tooltips .tooltips a,
+#navigation.cards .cards a,
+#navigation.dialogs .dialogs a,
+#navigation.lists .lists a,
+#navigation.tables .tables a,
+#navigation.navigation .navigation a,
+#navigation.charts .charts a,
+#navigation.menus .menus a,
+#navigation.steps .steps a,
+#navigation.snackbars .snackbars a,
+#navigation.registration-interface .registration-interface a,
+#navigation.application-interface .application-interface a,
+#navigation.user-flows .user-flows a,
+#navigation.interactive-prototype .interactive-prototype a,
+#navigation.sample-app-instagram .sample-app-instagram a,
+#navigation.sample-app-facebook .sample-app-facebook a,
+#navigation.sample-app-iterations .sample-app-iterations a,
+#navigation.specs .specs a,
+#navigation.rlp-wireframes .rlp-wireframes a,
+#navigation.rlp_user_flows .rlp_user_flows a,
+#navigation.prototype .prototype a,
+#navigation.design .design a,
+#navigation.design-guide .design-guide a,
+#navigation.assets-delivery .assets-delivery a,
+#navigation.portfolio .portfolio a,
+#navigation.client .client a{
+  background-color: #2189FF;
+  color: #fff;
+}

@@ -1,0 +1,42 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=42 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="navigation" navgroup="ui-elements" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="04 UI Elementa" header_two="Navigations" %}
+  {% include 'course/partials/data.html' with current_lesson=42 video_length="07:13" %}
+  {% include 'course/partials/tabs.html' %}
+  {% include 'course/partials/video.html' with id=354898048 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li><a href="/course/media/navigation.xd" download>Navigation - Adobe Xd File</a></li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      There are many ways how navigation can be presented in the application. It can contain text or icons only but it can also contain icons and text together.
+
+      Navigation is usually placed on the top part of the interface or on a side. In some case, it can also be placed at the bottom.
+
+      Active state of navigation can be presented with the use of colour, opacity, borders or background colour, but it needs to be always clear which element is the active one.
+    </p>
+
+  </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

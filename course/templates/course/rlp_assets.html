@@ -1,0 +1,40 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=95 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="assets-delivery" navgroup="real-life-project" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="07 Real-life project" header_two="Files Hands Off" %}
+  {% include 'course/partials/data.html' with current_lesson=60 video_length="01:37" %}
+  {% include 'course/partials/tabs.html' with nofiles="nofiles" %}
+  {% include 'course/partials/video.html' with id=356877872 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li>No Files</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>
+      When your design work is finished and the client is happy with your work you will have to hand off the files. Normally you would create a shared folder on Google Drive, Dropbox, Microsoft One Drive. If the project is too small email might be good enough.
+
+      Depending on the client and their workflow you might be asked to provide your mockups in JPG or PDF format.  More tech-savvy clients might require uploading the files to web applications such are Zeplin or Invision where their developers can get the assets, colours, sizes directly from the Xd files.
+    </p>
+
+  </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

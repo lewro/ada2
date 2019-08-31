@@ -1,0 +1,44 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=33 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="buttons" navgroup="ui-elements" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="04 UI Elementa" header_two="Buttons" %}
+  {% include 'course/partials/data.html' with current_lesson=33 video_length="06:06" %}
+  {% include 'course/partials/tabs.html' %}
+  {% include 'course/partials/video.html' with id=354698295 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li><a href="/course/media/buttons.xd" download>Buttons - Adobe Xd File</a></li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <p>There are various button types used in application design.</p>
+
+    <ul>
+      <li>Contained Button</li>
+      <li>Outlined Button</li>
+      <li>Text Button</li>
+    </ul>
+
+    <p>They all have their place in app. design. Using various button types brings visual hierarchy to the view. A strong contained button can be used for the primary action in the view while text buttons can be used for secondary actions which are not used as often.</p>
+
+  </div>
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+{% with nav as nav %}
+{% with navgroup as navgroup %}
+
+{% include 'course/partials/progress-indicator.html' with progress_value=18 %}
+
+<div id="sidebar">
+  {% include 'course/partials/navigation.html' with nav="resources" navgroup="design-basics" %}
+</div>
+
+<div id="content">
+  {% include 'course/partials/show-nav.html' %}
+  {% include 'course/partials/lesson_header.html' with header_one="02 Design Basics" header_two="Resources" %}
+  {% include 'course/partials/data.html' with current_lesson=18 video_length="01:51" %}
+  {% include 'course/partials/tabs.html' with nofiles="nofiles" %}
+  {% include 'course/partials/video.html' with id=353388114 %}
+
+  <div class="tab-content" id="files">
+    <ul>
+      <li>No Files</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="desription">
+    <h3>Icons</h3>
+    <p>
+      There are various online resources which can provide you with a great set of icons.
+
+      Font icons are quite often used In the application design as they scale to any size and can easily be used in the design process as well as development.
+    </p>
+    <ul>
+     <li><a href="https://fontawesome.com">Fontawesome</a></li>
+     <li><a href="https://material.io/tools/icons">Google Material</a></li>
+     <li><a href="https://thenounproject.com">Thenounproject</a></li>
+    </ul>
+
+    <h3>Fonts</h3>
+    <p>
+      There are various online resources where you can find fonts for your projects.
+
+      Make sure you understand the company branding and design guide before choosing fonts for the project.
+    </p>
+    <ul>
+      <li><a href="https://fonts.google.com">Google Fonts</a></li>
+      <li><a href="https://fonts.adobe.com/fonts">Adobe Fonts</a></li>
+    </ul>
+
+    <h3>Color</h3>
+    <p>
+      There are various online resources which can help you
+      building color themes, picking interesting colors or creating
+      gradients.
+
+      Make sure you understand the company branding and design guide before choosing colors for the project.
+    </p>
+
+    <ul>
+      <li><a href="https://coolors.co">Colors</a></li>
+      <li><a href="https://colorhunt.co">Colorhunt</a></li>
+      <li><a href="https://uigradients.com">Uigradients</a></li>
+    </ul>
+
+  </div>
+
+
+  {% include 'course/partials/contact-form.html' %}
+</div>
+
+{% endwith %}
+{% endwith %}
+{% endblock %}
