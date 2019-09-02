@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'accounts.apps.AccountsConfig',
-    #'debug_toolbar',
 
     #My app
     'course',
