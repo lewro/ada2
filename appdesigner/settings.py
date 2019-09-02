@@ -63,7 +63,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
     'accounts.middleware.OneSessionPerUserMiddleware',
-    #'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'appdesigner.urls'
@@ -161,9 +160,6 @@ EMAIL_USE_TLS              = True
 EMAIL_PORT                 = 587
 EMAIL_HOST_USER            = 'applicationdesignacademy@gmail.com'
 EMAIL_HOST_PASSWORD        = 'Namor070'
-
-#Debug Toolbar
-#INTERNAL_IPS = ['127.0.0.1']
 
 LOGGING = {
     'version': 1,
